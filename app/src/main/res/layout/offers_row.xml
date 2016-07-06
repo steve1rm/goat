@@ -1,55 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<android.support.v7.widget.GridLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    app:columnCount="3"
+    app:rowCount="5">
 
+    <!-- Row 1 -->
     <ImageView
-        android:id="@+id/ivOptions"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="8dp"
+        android:id="@+id/ivOptions"
         android:src="@drawable/ic_remove_circle_outline_black_24dp"/>
 
     <TextView
         android:id="@+id/tvSize"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/ivOptions"
+        app:layout_columnSpan="2"
         android:text="Size 8.0/ Tubular Doom Primeknit Core Black"
-        android:textSize="12sp"
+        android:textSize="14sp"
         android:textColor="@android:color/black"
-        android:fontFamily="sans-serif-condensed"/>
+        android:fontFamily="sans-serif-light"/>
 
+    <!-- Row 2 -->
     <TextView
         android:id="@+id/tvPartNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/ivOptions"
-        android:layout_below="@id/tvSize"
+        app:layout_column="1"
+        app:layout_columnSpan="2"
         android:text="S74921"
-        android:textSize="8dp"/>
+        android:textSize="12sp"
+        app:layout_row="1" />
 
+    <!-- Row 3 -->
     <ImageView
         android:id="@+id/ivSneaker"
         android:layout_width="80dp"
         android:layout_height="50dp"
-        android:layout_below="@id/tvPartNumber"
+        app:layout_gravity="center"
+        app:layout_columnWeight="1"
         android:src="@drawable/sneakers_200"
         android:scaleType="fitXY"/>
 
     <include
         android:id="@+id/top_offers"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tvPartNumber"
-        android:layout_toRightOf="@id/ivSneaker"
+        android:layout_width="wrap_content"
+        app:layout_gravity="center"
         layout="@layout/top_offers"/>
 
     <include
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/top_offers"
-        android:layout_below="@id/tvPartNumber"
+        android:layout_width="wrap_content"
+        app:layout_gravity="center"
+        app:layout_columnWeight="1"
         layout="@layout/offers_button"/>
 
-</RelativeLayout>
+    <!-- Row 4 -->
+    <include
+        app:layout_column="1"
+        layout="@layout/last_sale_row"/>
+</android.support.v7.widget.GridLayout>
