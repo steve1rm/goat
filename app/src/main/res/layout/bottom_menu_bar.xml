@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:background="@android:color/black">
+
+   <include
+       android:layout_width="0dp"
+       android:layout_weight="1"
+       android:layout_height="wrap_content"
+       layout="@layout/order_button"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textSize="22sp"
+        android:text="COUP"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:fontFamily="sans-serif-thin"/>
+
+    <ImageView
+        android:id="@+id/ivSaleUp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_more_horiz_white_36dp"/>
+
+</LinearLayout>
