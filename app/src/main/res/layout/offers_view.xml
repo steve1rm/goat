@@ -1,8 +1,24 @@
-<FrameLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="me.androidbox.goat.OffersView">
 
-</FrameLayout>
+    <include
+        android:id="@+id/top_menu_bar"
+        layout="@layout/top_menu_bar"/>
+
+    <include
+        android:id="@+id/bottom_menu_bar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        layout="@layout/bottom_menu_bar"/>
+
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_menu_bar"
+        layout="@layout/offers_row"/>
+</RelativeLayout>
