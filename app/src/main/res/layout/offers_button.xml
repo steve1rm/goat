@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:padding="12dp"
     android:background="@drawable/offers_border"
-    android:text="OFFERS"
+    android:text="OFFER"
     android:textColor="@android:color/white"
     android:textStyle="bold"
     android:gravity="center"
