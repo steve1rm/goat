@@ -28,8 +28,11 @@
         android:id="@+id/tvPartNumber"
         app:layout_column="1"
         app:layout_columnSpan="2"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="10dp"
         android:text="S74921"
         android:textSize="12sp"
+        android:fontFamily="sans-serif"
         app:layout_row="1" />
 
     <!-- Row 3 -->

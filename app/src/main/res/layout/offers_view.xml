@@ -10,15 +10,61 @@
         layout="@layout/top_menu_bar"/>
 
     <include
+        android:id="@+id/want_row"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_below="@id/top_menu_bar"
+        layout="@layout/want_row"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/want_row"
+        android:background="@android:color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/tvSortBy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/want_row"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Sort by: Offers"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:fontFamily="sans-serif-light"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tvSortBy"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/darker_gray"/>
+
+    <include
+        android:id="@+id/offers_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/tvSortBy"
+        layout="@layout/offers_row"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/offers_row"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/darker_gray"/>
+
+    <include
         android:id="@+id/bottom_menu_bar"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:layout_alignParentBottom="true"
         layout="@layout/bottom_menu_bar"/>
 
-    <include
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/top_menu_bar"
-        layout="@layout/offers_row"/>
 </RelativeLayout>
