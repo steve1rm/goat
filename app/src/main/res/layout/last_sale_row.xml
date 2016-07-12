@@ -20,5 +20,4 @@
         android:textSize="12sp"
         android:textColor="@android:color/black"
         android:text="LAST SALE $230"/>
-
 </LinearLayout>
